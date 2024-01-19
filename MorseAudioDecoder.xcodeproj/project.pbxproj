@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C84A670A2B5A43A5007C60B1 /* MorseAudioDecoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84A67092B5A43A5007C60B1 /* MorseAudioDecoderApp.swift */; };
+		C84A670C2B5A43A5007C60B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84A670B2B5A43A5007C60B1 /* ContentView.swift */; };
+		C84A670E2B5A43A6007C60B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C84A670D2B5A43A6007C60B1 /* Assets.xcassets */; };
+		C84A67112B5A43A6007C60B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C84A67102B5A43A6007C60B1 /* Preview Assets.xcassets */; };
+		C84A671B2B5A43A7007C60B1 /* MorseAudioDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84A671A2B5A43A7007C60B1 /* MorseAudioDecoderTests.swift */; };
+		C84A67252B5A43A7007C60B1 /* MorseAudioDecoderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84A67242B5A43A7007C60B1 /* MorseAudioDecoderUITests.swift */; };
+		C84A67272B5A43A7007C60B1 /* MorseAudioDecoderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84A67262B5A43A7007C60B1 /* MorseAudioDecoderUITestsLaunchTests.swift */; };
+		C84A67342B5A43B2007C60B1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84A67332B5A43B2007C60B1 /* ViewModel.swift */; };
+		C84A67362B5A4405007C60B1 /* DecodeMorseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84A67352B5A4405007C60B1 /* DecodeMorseCode.swift */; };
+		C84A673A2B5A443F007C60B1 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84A67392B5A443F007C60B1 /* AudioRecorder.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C84A67172B5A43A7007C60B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C84A66FE2B5A43A5007C60B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C84A67052B5A43A5007C60B1;
+			remoteInfo = MorseAudioDecoder;
+		};
+		C84A67212B5A43A7007C60B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C84A66FE2B5A43A5007C60B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C84A67052B5A43A5007C60B1;
+			remoteInfo = MorseAudioDecoder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C84A67062B5A43A5007C60B1 /* MorseAudioDecoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorseAudioDecoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C84A67092B5A43A5007C60B1 /* MorseAudioDecoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseAudioDecoderApp.swift; sourceTree = "<group>"; };
+		C84A670B2B5A43A5007C60B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C84A670D2B5A43A6007C60B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C84A67102B5A43A6007C60B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C84A67162B5A43A7007C60B1 /* MorseAudioDecoderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorseAudioDecoderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C84A671A2B5A43A7007C60B1 /* MorseAudioDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseAudioDecoderTests.swift; sourceTree = "<group>"; };
+		C84A67202B5A43A7007C60B1 /* MorseAudioDecoderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorseAudioDecoderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C84A67242B5A43A7007C60B1 /* MorseAudioDecoderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseAudioDecoderUITests.swift; sourceTree = "<group>"; };
+		C84A67262B5A43A7007C60B1 /* MorseAudioDecoderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseAudioDecoderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C84A67332B5A43B2007C60B1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		C84A67352B5A4405007C60B1 /* DecodeMorseCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeMorseCode.swift; sourceTree = "<group>"; };
+		C84A67392B5A443F007C60B1 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C84A67032B5A43A5007C60B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84A67132B5A43A7007C60B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84A671D2B5A43A7007C60B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C84A66FD2B5A43A5007C60B1 = {
+			isa = PBXGroup;
+			children = (
+				C84A67082B5A43A5007C60B1 /* MorseAudioDecoder */,
+				C84A67192B5A43A7007C60B1 /* MorseAudioDecoderTests */,
+				C84A67232B5A43A7007C60B1 /* MorseAudioDecoderUITests */,
+				C84A67072B5A43A5007C60B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C84A67072B5A43A5007C60B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C84A67062B5A43A5007C60B1 /* MorseAudioDecoder.app */,
+				C84A67162B5A43A7007C60B1 /* MorseAudioDecoderTests.xctest */,
+				C84A67202B5A43A7007C60B1 /* MorseAudioDecoderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C84A67082B5A43A5007C60B1 /* MorseAudioDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				C84A67092B5A43A5007C60B1 /* MorseAudioDecoderApp.swift */,
+				C84A670B2B5A43A5007C60B1 /* ContentView.swift */,
+				C84A67332B5A43B2007C60B1 /* ViewModel.swift */,
+				C84A67352B5A4405007C60B1 /* DecodeMorseCode.swift */,
+				C84A670D2B5A43A6007C60B1 /* Assets.xcassets */,
+				C84A670F2B5A43A6007C60B1 /* Preview Content */,
+				C84A67392B5A443F007C60B1 /* AudioRecorder.swift */,
+			);
+			path = MorseAudioDecoder;
+			sourceTree = "<group>";
+		};
+		C84A670F2B5A43A6007C60B1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C84A67102B5A43A6007C60B1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C84A67192B5A43A7007C60B1 /* MorseAudioDecoderTests */ = {
+			isa = PBXGroup;
+			children = (
+				C84A671A2B5A43A7007C60B1 /* MorseAudioDecoderTests.swift */,
+			);
+			path = MorseAudioDecoderTests;
+			sourceTree = "<group>";
+		};
+		C84A67232B5A43A7007C60B1 /* MorseAudioDecoderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C84A67242B5A43A7007C60B1 /* MorseAudioDecoderUITests.swift */,
+				C84A67262B5A43A7007C60B1 /* MorseAudioDecoderUITestsLaunchTests.swift */,
+			);
+			path = MorseAudioDecoderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C84A67052B5A43A5007C60B1 /* MorseAudioDecoder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C84A672A2B5A43A7007C60B1 /* Build configuration list for PBXNativeTarget "MorseAudioDecoder" */;
+			buildPhases = (
+				C84A67022B5A43A5007C60B1 /* Sources */,
+				C84A67032B5A43A5007C60B1 /* Frameworks */,
+				C84A67042B5A43A5007C60B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MorseAudioDecoder;
+			productName = MorseAudioDecoder;
+			productReference = C84A67062B5A43A5007C60B1 /* MorseAudioDecoder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C84A67152B5A43A7007C60B1 /* MorseAudioDecoderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C84A672D2B5A43A7007C60B1 /* Build configuration list for PBXNativeTarget "MorseAudioDecoderTests" */;
+			buildPhases = (
+				C84A67122B5A43A7007C60B1 /* Sources */,
+				C84A67132B5A43A7007C60B1 /* Frameworks */,
+				C84A67142B5A43A7007C60B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C84A67182B5A43A7007C60B1 /* PBXTargetDependency */,
+			);
+			name = MorseAudioDecoderTests;
+			productName = MorseAudioDecoderTests;
+			productReference = C84A67162B5A43A7007C60B1 /* MorseAudioDecoderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C84A671F2B5A43A7007C60B1 /* MorseAudioDecoderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C84A67302B5A43A7007C60B1 /* Build configuration list for PBXNativeTarget "MorseAudioDecoderUITests" */;
+			buildPhases = (
+				C84A671C2B5A43A7007C60B1 /* Sources */,
+				C84A671D2B5A43A7007C60B1 /* Frameworks */,
+				C84A671E2B5A43A7007C60B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C84A67222B5A43A7007C60B1 /* PBXTargetDependency */,
+			);
+			name = MorseAudioDecoderUITests;
+			productName = MorseAudioDecoderUITests;
+			productReference = C84A67202B5A43A7007C60B1 /* MorseAudioDecoderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C84A66FE2B5A43A5007C60B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					C84A67052B5A43A5007C60B1 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					C84A67152B5A43A7007C60B1 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = C84A67052B5A43A5007C60B1;
+					};
+					C84A671F2B5A43A7007C60B1 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = C84A67052B5A43A5007C60B1;
+					};
+				};
+			};
+			buildConfigurationList = C84A67012B5A43A5007C60B1 /* Build configuration list for PBXProject "MorseAudioDecoder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C84A66FD2B5A43A5007C60B1;
+			productRefGroup = C84A67072B5A43A5007C60B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C84A67052B5A43A5007C60B1 /* MorseAudioDecoder */,
+				C84A67152B5A43A7007C60B1 /* MorseAudioDecoderTests */,
+				C84A671F2B5A43A7007C60B1 /* MorseAudioDecoderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C84A67042B5A43A5007C60B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84A67112B5A43A6007C60B1 /* Preview Assets.xcassets in Resources */,
+				C84A670E2B5A43A6007C60B1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84A67142B5A43A7007C60B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84A671E2B5A43A7007C60B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C84A67022B5A43A5007C60B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84A670C2B5A43A5007C60B1 /* ContentView.swift in Sources */,
+				C84A67362B5A4405007C60B1 /* DecodeMorseCode.swift in Sources */,
+				C84A67342B5A43B2007C60B1 /* ViewModel.swift in Sources */,
+				C84A670A2B5A43A5007C60B1 /* MorseAudioDecoderApp.swift in Sources */,
+				C84A673A2B5A443F007C60B1 /* AudioRecorder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84A67122B5A43A7007C60B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84A671B2B5A43A7007C60B1 /* MorseAudioDecoderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84A671C2B5A43A7007C60B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84A67252B5A43A7007C60B1 /* MorseAudioDecoderUITests.swift in Sources */,
+				C84A67272B5A43A7007C60B1 /* MorseAudioDecoderUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C84A67182B5A43A7007C60B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C84A67052B5A43A5007C60B1 /* MorseAudioDecoder */;
+			targetProxy = C84A67172B5A43A7007C60B1 /* PBXContainerItemProxy */;
+		};
+		C84A67222B5A43A7007C60B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C84A67052B5A43A5007C60B1 /* MorseAudioDecoder */;
+			targetProxy = C84A67212B5A43A7007C60B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C84A67282B5A43A7007C60B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "For recording";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C84A67292B5A43A7007C60B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "For recording";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C84A672B2B5A43A7007C60B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MorseAudioDecoder/Preview Content\"";
+				DEVELOPMENT_TEAM = M8K64HL9AJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.MorseAudioDecoder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C84A672C2B5A43A7007C60B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MorseAudioDecoder/Preview Content\"";
+				DEVELOPMENT_TEAM = M8K64HL9AJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.MorseAudioDecoder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C84A672E2B5A43A7007C60B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M8K64HL9AJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.MorseAudioDecoderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorseAudioDecoder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MorseAudioDecoder";
+			};
+			name = Debug;
+		};
+		C84A672F2B5A43A7007C60B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M8K64HL9AJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.MorseAudioDecoderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorseAudioDecoder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MorseAudioDecoder";
+			};
+			name = Release;
+		};
+		C84A67312B5A43A7007C60B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M8K64HL9AJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.MorseAudioDecoderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MorseAudioDecoder;
+			};
+			name = Debug;
+		};
+		C84A67322B5A43A7007C60B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M8K64HL9AJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.MorseAudioDecoderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MorseAudioDecoder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C84A67012B5A43A5007C60B1 /* Build configuration list for PBXProject "MorseAudioDecoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C84A67282B5A43A7007C60B1 /* Debug */,
+				C84A67292B5A43A7007C60B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C84A672A2B5A43A7007C60B1 /* Build configuration list for PBXNativeTarget "MorseAudioDecoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C84A672B2B5A43A7007C60B1 /* Debug */,
+				C84A672C2B5A43A7007C60B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C84A672D2B5A43A7007C60B1 /* Build configuration list for PBXNativeTarget "MorseAudioDecoderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C84A672E2B5A43A7007C60B1 /* Debug */,
+				C84A672F2B5A43A7007C60B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C84A67302B5A43A7007C60B1 /* Build configuration list for PBXNativeTarget "MorseAudioDecoderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C84A67312B5A43A7007C60B1 /* Debug */,
+				C84A67322B5A43A7007C60B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C84A66FE2B5A43A5007C60B1 /* Project object */;
+}
