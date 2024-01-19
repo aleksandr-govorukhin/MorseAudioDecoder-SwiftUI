@@ -27,29 +27,8 @@ final class DecodeMorseCode {
         ".-...": "&", ".--.-.": "@"
     ]
     
-    private var audioEngine = AVAudioEngine()
-    
     var morseCode = PassthroughSubject<String, Never>()
     var decodeText = PassthroughSubject<String, Never>()
-    
-    init() {
-        setupAudioEngine()
-    }
-    
-    func startAudioEngine() {
-        do {
-            try audioEngine.start()
-            print("Audio Engine Started")
-        } catch {
-            print("Error starting Audio Engine: \(error.localizedDescription)")
-        }
-    }
-    
-    func stopAudioEngine() {
-        audioEngine.stop()
-        audioEngine.inputNode.removeTap(onBus: 0)
-        print("Audio Engine Stopped")
-    }
     
     func decode(url: URL) {
         // Указать полный путь к аудиофайлу
@@ -151,7 +130,7 @@ final class DecodeMorseCode {
             }
         }
         
-        self.morseCode.send(morseResult)
+        morseCode.send(morseResult)
         
         // Декодирование кода Морзе
         let morseArray = morseResult.components(separatedBy: "/")
@@ -163,104 +142,6 @@ final class DecodeMorseCode {
             }
         }
         
-        self.decodeText.send(plainText)
-    }
-}
-
-private extension DecodeMorseCode {
-    func setupAudioEngine() {
-        
-        // Установка формата аудио (может потребоваться настройка в соответствии с вашими требованиями)
-        let audioInputNode = audioEngine.inputNode
-        
-        // Создание узла ввода для записи аудио
-        let format = audioEngine.inputNode.inputFormat(forBus: 0)
-        
-        var morseResult = ""
-        
-        // Добавление обработчика блока для аудиоузла
-        audioInputNode.installTap(onBus: 0, bufferSize: 4096, format: format) { buffer, _ in
-            
-            // Чтение аудио информации
-            let frames = Int(buffer.frameLength)
-            
-            // Чтение информации о спектре
-            let waveData = buffer.floatChannelData!.pointee
-            let waveAvg = Int(waveData.pointee / Float(frames))
-            
-            // Рисование графика Морзе
-            var morseBlockSum = 0
-            var morseBlockLength = 0
-            var morseArr = [Int]()
-            var timeArr = [Int]()
-            
-            for i in 0..<frames {
-                let value = Int(abs(waveData[i]) * 10)
-                
-                if value > waveAvg {
-                    morseBlockSum += 1
-                } else {
-                    morseBlockSum += 0
-                }
-                
-                morseBlockLength += 1
-                
-                if morseBlockLength == 100 {
-                    // Если среднее значение блока больше половины, считаем его как "1", иначе "0"
-                    if sqrt(Float(morseBlockSum) / 100) > 0.6 {
-                        morseArr.append(1)
-                    } else {
-                        morseArr.append(0)
-                    }
-                    
-                    timeArr.append(timeArr.count)
-                    morseBlockLength = 0
-                    morseBlockSum = 0
-                }
-            }
-            
-            // Преобразование в код Морзе
-            var morseType = [Int]()
-            var morseLen = [Int]()
-            var morseObjSum = [0, 0]
-            var morseObjLen = [0, 0]
-            
-            for i in morseArr {
-                // Если массив пуст или последний элемент не совпадает с текущим, начинаем новый блок
-                if morseType.isEmpty || morseType.last! != i {
-                    morseObjLen[i] += 1
-                    morseObjSum[i] += 1
-                    morseType.append(i)
-                    morseLen.append(1)
-                } else {
-                    // Если длина блока не превышает 100, увеличиваем его длину
-                    if morseLen.last! <= 100 {
-                        morseObjSum[i] += 1
-                        morseLen[morseType.count - 1] += 1
-                    }
-                }
-            }
-            
-            let morseBlockAvg = Float(morseObjSum[1]) / Float(morseObjLen[1])
-            let morseBlankAvg = Float(morseObjSum[0]) / Float(morseObjLen[0])
-            
-            // Конвертация в код Морзе
-            for i in 0..<morseType.count {
-                if morseType[i] == 1 {
-                    // Если длина блока больше средней, считаем его как "-", иначе "."
-                    if morseLen[i] > Int(morseBlockAvg) {
-                        morseResult += "-"
-                    } else if morseLen[i] < Int(morseBlockAvg) {
-                        morseResult += "."
-                    }
-                } else if morseType[i] == 0 {
-                    if morseLen[i] > Int(morseBlankAvg) {
-                        morseResult += "/"
-                    }
-                }
-            }
-        }
-        
-        audioEngine.prepare()
+        decodeText.send(plainText)
     }
 }
